@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/jamesw/multistores/shared/pz/module/Search/src/Search/Relational/Category'
+let g:netrw_dirhist_2='/home/jamesw/multistores/shared/pz/module/Basket/test/BasketTest/Controller'
+let g:netrw_dirhist_3='/home/jamesw/multistores/shared/pz/module/Search/test'
+let g:netrw_dirhist_4='/home/jamesw/multistores/shared/pz/module/Search/config'
