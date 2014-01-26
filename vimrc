@@ -237,6 +237,10 @@ let g:hs_highlight_more_types = 1
 
 " We don't like whitesapce and the end of files or end of lines.
 function! RemoveTrailingWhitespace()
+  if exists("b:keep_trailing_whitespace") && b:keep_trailing_whitespace
+    return
+  endif
+
   let save_cursor = getpos(".")
   call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
   :%s@\($\n\s*\)\+\%$@@e
