@@ -172,6 +172,11 @@ function! EnhCommentifyCallback(ft)
   elseif a:ft == 'lemon'
     let b:ECcommentOpen = '//'
     let b:ECcommentClose = ''
+  elseif a:ft == 'php'
+    " Should already be supported but seems to disappear sometimes?  Fucking
+    " globals in vim distributed syntax files probably.
+    let b:ECcommentOpen = '//'
+    let b:ECcommentClose = ''
   elseif a:ft == 'docbk'
     let b:ECcommentOpen = '<!--'
     " Don't know why you need this, but it fails otherwise.
