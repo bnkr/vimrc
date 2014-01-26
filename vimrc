@@ -261,6 +261,12 @@ autocmd FileType python,docbk,xxs,c,cpp,java,ruby,cmake,latex,lemon,tex,asciidoc
 autocmd FileType python setlocal sw=4
 autocmd FileType python setlocal ts=4
 
+" PHP syntax messes with formations in a conflciting way which means that I
+" can't format comments properly.
+let g:PHP_autoformatcomment=0
+" With the above turned off this value never gets set.
+autocmd FileType php setlocal comments=s1:/*,mb:*,ex:*/,://,:#
+
 " XML turns off spell checking in unless folding is on.  I have *no* idea why
 " thsi is but this line fixes it.
 let g:xml_syntax_folding=1
