@@ -283,8 +283,8 @@ au FileType docbk end
 
 " Attempts to stop these filetypes from cocking up my other buffers.
 au FileType htmldjango setlocal shiftwidth=2
-au FileType javascript setlocal shiftwidth=2
-au FileType javascript setlocal tabstop=2
+au FileType javascript setlocal shiftwidth=4
+au FileType javascript setlocal tabstop=4
 au FileType javascript setlocal expandtab
 
 " The highligher is not capable of doing <script> slements properly unless we
