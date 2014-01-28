@@ -189,7 +189,6 @@ let g:EnhCommentifyCallbackExists = 'Yes'
 
 " Set up for auto-wrapping with formatoptions.
 set textwidth=80
-" FIXME: fucks sake... this is being set for everything!!
 autocmd FileType xml,tex,docbk setlocal textwidth=120
 
 " C commenting:
@@ -213,9 +212,11 @@ set cinoptions=:0,(s,U1,Ws,m1,h0
 " n = recognise numbered lists and wrap.
 " l = don't break lines which are already too long.
 set formatoptions=crqnl
+" Something overwrites this.
+autocmd FileType php setlocal formatoptions=crqnl
 " In text, always break lines (I think latex-suite pretty much always overrides
 " this... meh).
-autocmd FileType text,tex,latex set formatoptions=crqn
+autocmd FileType text,tex,latex setlocal formatoptions=crqn
 
 " This is for shell, so double brackets don't show up as errors.
 let g:is_posix=1
